@@ -1,0 +1,1151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredients Comparison: Original vs Corrected</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .stats {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+        .stat-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        .entry {
+            margin: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .entry-header {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            border-bottom: 1px solid #dee2e6;
+            font-weight: bold;
+            color: #495057;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .column {
+            padding: 20px;
+            border-right: 1px solid #dee2e6;
+        }
+        .column:last-child {
+            border-right: none;
+        }
+        .column-header {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+            color: #495057;
+        }
+        .ingredients-content {
+            line-height: 1.6;
+            color: #495057;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+            .column {
+                border-right: none;
+                border-bottom: 1px solid #dee2e6;
+            }
+            .stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ingredients Comparison</h1>
+            <p>Original vs Corrected Ingredients Analysis</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">50</div>
+                <div class="stat-label">Entries Analyzed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2025-08-03</div>
+                <div class="stat-label">Generated Date</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">12:03</div>
+                <div class="stat-label">Generated Time</div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 1 - Barcode: 8901725100063
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        WATER,<br>APPLE JUICE (15%),<br>SUGAR,<br>POLYDEXTROSE (DIETARY FIBER) (0.95%),<br>ACIDITY REGULATOR (INS 296),<br>NATURE IDENTICAL FLAVOURING SUBSTANCES,<br>VITAMINS,<br>STABILIZERS (INS 415,<br>INS 466),<br>COLOUR (INS 150D) AND NATURAL FLAVOURS AND NATURAL FLAVOURING SUBSTANCES.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Malic acid (E296)<br>Xanthan gum (E415)<br>Carboxymethyl cellulose (E466)<br>Sulphite ammonia caramel (E150d)<br>Sucrose<br>Polydextrose (E1200)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 2 - Barcode: 8901725101374
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        MAIDA (REFINED WHEAT FLOUR),<br>SUGAR (32.8%),<br>REFINED PALM OIL,<br>COLOURS [INS 150d,<br>INS 129],<br>STARCH,<br>COCOA SOLIDS (2.3%),<br>MILK SOLIDS,<br>RAISING AGENTS [INS 503(ii),<br>ARTIFICIAL FLAVOURING SUBSTANCES (VANILLA,<br>CHOCOLATE),<br>EMULSIFIERS [MONO- AND DI-GLYCERIDES OF FATTY ACIDS (FROM PALM OIL),<br>SOYA LECITHIN (FROM SOYABEAN)],<br>REFIN CHICOLATE (0.5%),<br>IODIZED SALT.<br>(FLAVOURING SUBSTANCES-CHOCOLATE).
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Allura Red AC (E129)<br>Ammonium carbonate (E503)<br>Sulphite ammonia caramel (E150d)<br>Sucrose<br>Starches (E1400-1414)<br>Vanillin<br>Mixed acetic and tartaric acid esters of mono- and diglycerides of fatty acids (E472f)<br>Sodium chloride / salt<br>Ethyl Vanillin<br>Artificial flavouring
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 3 - Barcode: 8901725181260
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        INSTANT NOOPLES: Refined Wheat Flour (Maida) (78.4%),<br>Refined Palm Oil,<br>Iodized Salt,<br>Wheat Gluten (0.4%),<br>Thickeners (INS 508,<br>INS 412),<br>Stabilizers [INS 170(i),<br>INS 339(ii),<br>INS 450(iii),<br>INS 452(i)] and Acidity Regulators [INS 501(i),<br>INS 500(i),<br>INS 330].<br>SEASONING: Masala Mix: Dehydrated Vegetables [Beans (9.5%),<br>Carrot (7.1%),<br>Onion (4.6%) and Cabbage (3.8%)],<br>Instant Noodle Powder [Refined Wheat Flour (Maida) (15.5%),<br>Refined Palm Oil,<br>Iodized Salt and Wheat Gluten (0.08%)],<br>Spices and Condiments (17.6%)[Garlic,<br>Coriander,<br>Cumin,<br>Ginger,<br>Chilli,<br>Aniseed,<br>Fenugreek,<br>Black Pepper,<br>Cardamom,<br>Nutmeg,<br>Caraway,<br>Cinnamon,<br>Clove and Turmeric],<br>Sugar,<br>Iodized Salt,<br>Hydrolyzed Vegetable Protein,<br>Natural Flavours and Natural Flavouring Substances,<br>Nature Identical Flavouring Substances,<br>Maltodextrin,<br>Yeast Extract,<br>Acidity Regulator (INS 330),<br>Flavour Enhancers (INS 627,<br>INS 631),<br>Anticaking Agent (INS 551),<br>Mineral,<br>Vitamins and Starch.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Citric acid: lemon salt (E330)<br>Silicon dioxide (Silica) (E551)<br>Potassium chloride (E508)<br>Guar gum (cluster bean gum) (E412)<br>Calcium carbonate (chalk) (E170)<br>Sodium phosphates (E339)<br>Diphosphates (E450)<br>Polyphosphates (E452)<br>Potassium carbonate (E501)<br>Sodium carbonate (E500)<br>Disodium guanylate (E627)<br>Disodium inosinate (E631)<br>Sodium chloride / salt<br>Glycine and its sodium salt (E640)<br>Curcumin (E100)<br>Sucrose<br>Hydrolysed vegetable protein (HVP)<br>Maltodextrin
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 4 - Barcode: 8901063093089
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        REFINED WHEAT FLOUR (MAIDA),<br>EDIBLE VEGETABLE OIL (PALM),<br>SUGAR,<br>CASHEW NUTS (4.5%),<br>INVERT SYRUP,<br>MILK SOLIDS,<br>BUTTER (0.6%),<br>RAISING AGENTS [503(ii) &amp; 500(ii)],<br>IODISED SALT AND EMULSIFIERS (322,<br>471,<br>472e).<br>CONTAINS ADDED FLAVOURS [NATURE IDENTICAL AND ARTIFICIAL (MILK AND VANILLA) FLAVOURING SUBSTANCES] (Numbers in brackets as per International Numbering System)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Mono- and diacetyltartaric acid esters of mono- and diglycerides of fatty acids (E472e)<br>Ammonium carbonate (E503)<br>Sodium carbonate (E500)<br>Lecithins (E322)<br>Mono- and diglycerides of fatty acids (E471)<br>Brominated vegetable oil<br>Sucrose<br>Invert sugar<br>Sodium chloride / salt<br>Vanillin<br>Artificial flavouring
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 5 - Barcode: 8901542006234
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Sucrose (99.9%),<br>Dextrose (Each 75%),<br>Acidity Regulator (INS 330),<br>Nature Identical Flavouring Substance,<br>Minerals (Calcium Phosphate),<br>Edible Common Salt,<br>Vitamin C,<br>Synthetic Colour (INS 110)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Citric acid: lemon salt (E330)<br>Sunset Yellow FCF: Orange Yellow S (E110)<br>Sucrose<br>Polydextrose (E1200)<br>Sodium chloride / salt<br>Ascorbic Acid: Vitamin C (E300)<br>Calcium phosphates (E341)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 6 - Barcode: 5000256014962
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Barley Malt Vinegar
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 7 - Barcode: 8901764175091
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Water,<br>Mango Pulp (10.7%),<br>Sugar,<br>Acidity Regulators (300,331(iii)),<br>Stabilizer(466),<br>Antioxidant (300),<br>Colour (110),<br>Mango Flavours (Nature-Identical &amp; Artificial Flavoring Substances)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Carboxymethyl cellulose (E466)<br>Ascorbic Acid: Vitamin C (E300)<br>Sunset Yellow FCF: Orange Yellow S (E110)<br>Sodium citrates (E331)<br>Sucrose
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 8 - Barcode: 8901063026162-2
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        REFINED WHEAT FLOUR (MAIDA) (90%),<br>REFINED PALM &amp; PALMOLEIN OIL,<br>RAISING AGENTS [503(ii) &amp; 500(ii)],<br>IODISED SALT,<br>MILK SOLIDS,<br>YEAST,<br>EMULSIFIER [322(i)],<br>ACIDITY REGULATORS [330 &amp; 334],<br>NATURAL AND NATURE IDENTICAL FLAVOURING SUBSTANCES,<br>DOUGH CONDITIONER [223] AND IMPROVERS [1101(i) &amp; 1100(i)].<br>(Numbers in brackets as per International Numbering System)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Ammonium carbonate (E503)<br>Sodium carbonate (E500)<br>Lecithins (E322)<br>Tartaric acid (L-(+)) (E334)<br>Citric acid: lemon salt (E330)<br>Sodium chloride / salt<br>Torula yeast
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 9 - Barcode: 8901808000785
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Cocoa Solids (99.75%).<br>CONTAINS ADDED ARTIFICIAL FLAVOURING SUBSTANCE - CHOCOLATE.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Artificial flavouring
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 10 - Barcode: 8901764092305
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Water,<br>Mango Pulp (19.5%),<br>Sugar,<br>Acidity Regulators (300,331(iii)),<br>Antioxidant (300),<br>Preservative (202),<br>Colour (110),<br>Mango Flavours (Natural,<br>Nature-Identical &amp; Artificial Flavoring Substances)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Ascorbic Acid: Vitamin C (E300)<br>Potassium sorbate (E202)<br>Sunset Yellow FCF: Orange Yellow S (E110)<br>Sodium citrates (E331)<br>Sucrose
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 11 - Barcode: 8904067709857
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Peanuts (85%),<br>Refined Cottonseed Oil,<br>Sugar,<br>Iodized Salt,<br>Chilli,<br>Spices &amp; Condiments (Coriander,<br>Cumin,<br>Black Pepper,<br>Fennel Seed,<br>Star Anise,<br>Cinnamon,<br>Clove,<br>Mace),<br>Dry Mango Powder,<br>Acidity Regulator (Citric Acid)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sucrose<br>Sodium chloride / salt<br>Curcumin (E100)<br>Citric acid: lemon salt (E330)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 12 - Barcode: 8901499008343
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Corn Grits (61.7%),<br>Sugar,<br>Sliced Almonds (6%),<br>Corn Extract,<br>Dextrose,<br>Honey (1%),<br>Lodised Salt,<br>Emulsifier (INS 322 (i))
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Lecithins (E322)<br>Sucrose<br>Polydextrose (E1200)<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 13 - Barcode: 8904067710990
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Chickpeas (Bengal Gram /Chana 80%),<br>Refined Cottonseed Oil,<br>Mixed Spices &amp; Herbs (Chilli,<br>Cumin,<br>Coriander,<br>Ginger,<br>Clove,<br>Cardamom,<br>Cinnamon,<br>Fenugreek Leaves,<br>Turmeric),<br>Iodized Salt,<br>Sugar,<br>Dehydrated Vegetable Powder (Onion,<br>Garlic),<br>Pomegranate Seed Powder,<br>Acidity Regulator (Citric Acid,<br>Malic Acid),<br>Hydrolyzed Vegetable Protein.<br>CONTAINS ADDED FLAVOUR NATURAL (CHILLI) AND NATURE IDENTICAL FLAVOURING SUBSTANCES
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Curcumin (E100)<br>Sodium chloride / salt<br>Sucrose<br>Malic acid (E296)<br>Citric acid: lemon salt (E330)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 14 - Barcode: 8904004400083
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Moth dal Flour,<br>Refined Palmolein Oil,<br>Bengal Gram Flour (Besan),<br>Starch,<br>lodised Salt,<br>Red Chili Powder,<br>Clove Powder,<br>Nutmeg,<br>Dried Ginger Powder,<br>Cardamom,<br>Black Pepper,<br>Bay Leaf,<br>and Cinnamon.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Starches (E1400-1414)<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 15 - Barcode: 8901058869002
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        VANILLA FLAVOURING SUBSTANCES
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Vanillin
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 16 - Barcode: 8901491990080
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Corn (77%),<br>Edible Vegetable Oil (Palmolein),<br>*Seasoning (Milk Solids,<br>Refined Wheat Flour (Maida),<br>Iodised Salt,<br>Flavour (Natural and Nature Identical Flavouring Substances),<br>Cheese Powder,<br>Tomato Powder,<br>~Spices &amp; Condiments,<br>Anticaking agent (551),<br>Color (160c),<br>Acidity Regulator (330))
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Silicon dioxide (Silica) (E551)<br>Citric acid: lemon salt (E330)<br>Paprika extract: Capsanthian: Capsorubin (E160c)<br>Corn syrup<br>Brominated vegetable oil<br>Sodium chloride / salt<br>Artificial flavouring
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 17 - Barcode: 8410125245170
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No ingredients available</em>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 18 - Barcode: 8906021922067
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        HONEY
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 19 - Barcode: 8901233023687
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        HYDROGENATED VEGETABLE FAT,<br>SUGAR,<br>MILK CHOCOLATE 28% - SUGAR,<br>MILK SOLIDS,<br>COCOA SOLIDS,<br>EMULSIFIERS (322,<br>476),<br>CONTAINS ADDED FLAVOUR (NATURAL,<br>NATURE IDENTICAL AND ARTIFICIAL (CARAMEL AND ETHYL VANILLIN)) FLAVOURING SUBSTANCES
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Lecithins (E322)<br>Polyglycerol polyricinoleate (E476)<br>Sucrose<br>Artificial flavouring<br>Vanillin
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 20 - Barcode: 8901571003129
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Cereal Extract (50%) (Barley,<br>Wheat,<br>Millet),<br>Malted Barley (21%),<br>Sugar,<br>Wheat Flour (Atta),<br>Milk Solids (6%),<br>Minerals,<br>Natural Colour (INS 150c),<br>Wheat Gluten,<br>Acidity Regulators [INS 501(ii),<br>INS 500(ii)],<br>Edible Iodised Salt,<br>Cocoa Powder,<br>Vitamins,<br>Nature Identical Flavouring Substances,<br>Soy Protein Isolate.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Potassium carbonate (E501)<br>Sodium carbonate (E500)<br>Ammonia caramel (E150c)<br>Sucrose<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 21 - Barcode: 8906143890107
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        peanuts,<br>date powder,<br>cocoa nibs (7.2%),<br>cocoa butter,<br>cocoa powder
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 22 - Barcode: 8901262151658
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Milk solids,<br>water,<br>sugar,<br>mango compound (2%),<br>stabilizer (440),<br>nature identical and artificial flavouring substances (mango),<br>active culture,<br>natural colour (160b).
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Annatto (E160b)<br>Sucrose<br>Artificial flavouring
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 23 - Barcode: 8906026900053
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Refined crystal sugar.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sucrose
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 24 - Barcode: 8901542001642
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Sucrose (56%),<br>Glucose (41%),<br>Acidity Regulator (INS 330),<br>Nature Identical Flavouring Substances,<br>Mineral (Calcium Phosphate),<br>Edible Common Salt,<br>Vitamin C,<br>Synthetic Colour (INS 110).
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Citric acid: lemon salt (E330)<br>Sunset Yellow FCF: Orange Yellow S (E110)<br>Sucrose<br>Sodium chloride / salt<br>Ascorbic Acid: Vitamin C (E300)<br>Calcium phosphates (E341)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 25 - Barcode: 8901262020015
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Cheese,<br>milk solids,<br>emulsifying salts (452,<br>339,<br>341),<br>iodized salt.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Polyphosphates (E452)<br>Sodium phosphates (E339)<br>Calcium phosphates (E341)<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 26 - Barcode: 8906127550140
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Roasted Organic Peanuts (100%)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 27 - Barcode: 8901764011252
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        CARBONATED WATER,<br>SUGAR,<br>ACIDITY REGULATOR (338),<br>CAFFEINE (8.7 MG/100 G),<br>COLOUR (150d),<br>FLAVOURS (NATURAL FLAVOURING SUBSTANCES)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Phosphoric acid (E338)<br>Sulphite ammonia caramel (E150d)<br>Sucrose<br>Caffeine
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 28 - Barcode: 8902852229115
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Kombucha Culture,<br>Filtered Water,<br>Organic Green Tea,<br>Organic Black Tea,<br>Erythritol,<br>Stevia,<br>Cranberry Flavour.<br>Contains natural and nature identical flavour
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Erythritol (E968)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 29 - Barcode: 8901063032484
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        REFINED WHEAT FLOUR (MAIDA),<br>SUGAR,<br>MARGARINE,<br>REFINED PALM OIL,<br>MIXED FRUIT PUREE (4.5%) (APPLE,<br>BANANA,<br>GUAVA,<br>PINEAPPLE),<br>VITAL GLUTEN,<br>BAKERY IMPROVER MIX (EMULSIFIERS (481(i) &amp; 471),<br>ANTICAKING AGENT (170(i)),<br>FLOUR TREATMENT AGENTS (1100(i) &amp; 1101(i)) &amp; ANTIOXIDANT (300)),<br>YEAST,<br>MILK SOLIDS,<br>EMULSIFIER (471),<br>STABILIZER (440),<br>IODISED SALT,<br>NATURE IDENTICAL FLAVOURING SUBSTANCES,<br>HUMECTANT (420(ii)),<br>PRESERVATIVES (282 &amp; 202),<br>BUTTER (0.14%),<br>ACIDITY REGULATORS (330,<br>296) AND COLOURS (150d,<br>129).<br>(Numbers in brackets as per International Numbering System)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Ascorbic Acid: Vitamin C (E300)<br>Mono- and diglycerides of fatty acids (E471)<br>Citric acid: lemon salt (E330)<br>Malic acid (E296)<br>Sulphite ammonia caramel (E150d)<br>Calcium carbonate (chalk) (E170)<br>Sorbitol (E420)<br>Sodium stearoyl-2-lactylate (E481)<br>Potassium sorbate (E202)<br>Calcium propionate (E282)<br>Sucrose<br>Torula yeast<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 30 - Barcode: 8906020580015
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        RO-purified water (50%),<br>Rice (34%),<br>Urad Dal,<br>Fenugreek and Iodized Salt.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 31 - Barcode: 8901207035517
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Garlic (28%),<br>Red Chilli Puree,<br>Tomato Paste (20.5%),<br>Onion,<br>Refined Sunflower Oil,<br>Iodized Salt,<br>Cumin seeds and powder (1%),<br>Mustard seeds (0.5%),<br>Acidity Regulator (INS 330),<br>Stabilizer (INS 415) and Preservative (INS 211).
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Citric acid: lemon salt (E330)<br>Xanthan gum (E415)<br>Sodium benzoate (E211)<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 32 - Barcode: 8901719124068
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        REFINED WHEAT FLOUR (MAIDA) (68%),<br>SUGAR,<br>REFINED PALM OIL,<br>SEMOLINA (SUJI),<br>YEAST,<br>IODISED SALT,<br>WHEAT GLUTEN,<br>EMULSIFIERS OF VEGETABLE ORIGIN [322,<br>471],<br>WHEAT FIBRE,<br>SPICES (CARDAMOM) (0.07%),<br>ACIDITY REGULATOR [260],<br>FLOUR TREATMENT AGENT [110(I)],<br>CONTAINS ADDED FLAVOUR (ARTIFICIAL FLAVOURING SUBSTANCES - CARDAMOM)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sunset Yellow FCF: Orange Yellow S (E110)<br>Lecithins (E322)<br>Sucrose<br>Torula yeast<br>Sodium chloride / salt<br>Artificial flavouring
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 33 - Barcode: 8901725003791
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Refined Wheat Flour (Maida) (78.4%),<br>Refined Palm Oil,<br>Iodized Salt,<br>Wheat Gluten (0.4%),<br>Thickeners (INS 508,<br>INS 412),<br>Stabilizers [INS 170(i),<br>INS 339(ii),<br>INS 450(iii),<br>INS 452(i)] and Acidity Regulators [INS 501(i),<br>INS 500(i),<br>INS 330].<br>Masala Mix: Dehydrated Vegetables [Beans (9.5%),<br>Carrot (7.1%),<br>Onion (4.6%) and Cabbage (3.8%)],<br>Instant Noodle Powder [Refined Wheat Flour (Maida) (15.5%),<br>Refined Palm Oil,<br>Iodized Salt and Wheat Gluten (0.08%)],<br>Spices and Condiments (17.6%)[Garlic,<br>Coriander,<br>Cumin,<br>Ginger,<br>Chilli,<br>Aniseed,<br>Fenugreek,<br>Black Pepper,<br>Cardamom,<br>Nutmeg,<br>Caraway,<br>Cinnamon,<br>Clove and Turmeric],<br>Sugar,<br>Iodized Salt,<br>Hydrolyzed Vegetable Protein,<br>Natural Flavours and Natural Flavouring Substances,<br>Nature Identical Flavouring Substances,<br>Maltodextrin,<br>Yeast Extract,<br>Acidity Regulator (INS 330),<br>Flavour Enhancers (INS 627,<br>INS 631),<br>Anticaking Agent (INS 551),<br>Mineral,<br>Vitamins and Starch.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Citric acid: lemon salt (E330)<br>Silicon dioxide (Silica) (E551)<br>Potassium chloride (E508)<br>Guar gum (cluster bean gum) (E412)<br>Calcium carbonate (chalk) (E170)<br>Sodium phosphates (E339)<br>Diphosphates (E450)<br>Polyphosphates (E452)<br>Potassium carbonate (E501)<br>Sodium carbonate (E500)<br>Disodium guanylate (E627)<br>Disodium inosinate (E631)<br>Sodium chloride / salt<br>Glycine and its sodium salt (E640)<br>Curcumin (E100)<br>Sucrose<br>Hydrolysed vegetable protein (HVP)<br>Maltodextrin
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 34 - Barcode: 8904067700762
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Wheat Flour (75%),<br>Refined Cottonseed Oil,<br>Iodized Salt,<br>Sugar,<br>Cumin (1.2%).
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sodium chloride / salt<br>Sucrose<br>Curcumin (E100)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 35 - Barcode: 8906002001163
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Roasted Peanuts (91%),<br>Sugar,<br>Edible Vegetable Fat (Soyabean),<br>lodised Salt.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sucrose<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 36 - Barcode: 8901491702546
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        1 cup Quaker Oats ground into flour,<br>½ cup gram flour (besan),<br>½ tsp ajwain,<br>1 tsp turmeric,<br>1 onion chopped,<br>1 tomato chopped,<br>2 green chillies chopped,<br>finely chopped coriander leaves,<br>handful baby spinach leaves cut into Julienne,<br>salt to taste,<br>water as required,<br>ghee/olive oil.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 37 - Barcode: 8901071732413
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Water,<br>Sugar,<br>Milk Solids (8%*),<br>Cocoa solids (0.75%*),<br>Emulsifier (4600),<br>466,<br>471),<br>Minerals (Calcium carbonate),<br>Sequestrant (339(ii),<br>Edible Common salt,<br>Mineral (Zinc sulphate),<br>Vitamin E (Acetate),<br>Vitamin A (Acetate),<br>Vitamin D2 (Ergocalciferol),<br>Vitamin B1 (Thiamine chloride hydrochloride) and Vitamin B2 (Riboflavin).<br>CONTAINS ADDED FLAVOUR - NATURE IDENTICAL FLAVOURING SUBSTANCES
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sodium phosphates (E339)<br>Carboxymethyl cellulose (E466)<br>Sucrose<br>Sodium chloride / salt<br>Tocopherol (Vitamin E) (E306)<br>Calciferol: Vitamin D<br>Calcium carbonate (chalk) (E170)<br>Sodium Diacetate
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 38 - Barcode: 8901725135430
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        REFINED WHEAT FLOUR (MAIDA),<br>REFINED PALM OIL (GDANS),<br>BUTTER (0.7%),<br>INVERT SYRUP,<br>MILK SOLIDS,<br>RAISING AGENTS {INS 500(II),<br>INS 503(II)},<br>IODISED SALT,<br>EMULSIFIERS {INS 322(I),<br>INS 471,<br>INS 472E},<br>DHE
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sodium carbonate (E500)<br>Ammonium carbonate (E503)<br>Lecithins (E322)<br>Mono- and diglycerides of fatty acids (E471)<br>Mono- and diacetyltartaric acid esters of mono- and diglycerides of fatty acids (E472e)<br>Invert sugar<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 39 - Barcode: 8904043926216
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Toor Dal
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 40 - Barcode: 8901088002530
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Refined Rice Bran Oil,<br>Refined Corn Oil,<br>Antioxidant (TBHQ),<br>Vitamin A (Retinyl Palmitate),<br>Vitamin D (Ergocalciferol)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Calciferol: Vitamin D
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 41 - Barcode: 8901248253109
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Aqua,<br>Palmitic acid [and] Stearic acid,<br>Glycyrrhiza glabra (Liquorice) distillate,<br>Niacinamide,<br>Ethylhexyl methoxycinnamate,<br>Glycerin,<br>Cyclopentasiloxane,<br>Vetiveria zizanioides (Vetiver) root alcohol,<br>Dimethicone,<br>Tetrapeptide-30 [and] Glycerin,<br>Aluminum starch octenylsuccinate,<br>Potassium hydroxide,<br>Titanium dioxide [and] Aluminum hydroxide [and] Stearic acid,<br>Hydrated silica,<br>Titanium dioxide [and] Aluminum hydroxide [and] Methylpolysiloxane,<br>Perfume,<br>Menthol,<br>Allantoin,<br>Disodium EDTA,<br>DMDM hydantoin,<br>Methylisothiazolinone.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Fatty acids: stearic acid (E570)<br>Potassium hydroxide (E525)<br>Titanium dioxide (E171)<br>Calcium disodium ethylene diamine tetra-acetate: calcium disodium EDTA (E385)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 42 - Barcode: 8904063240286
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Split Green Gram (74%),<br>Edible Vegetable Oil (Cotton Seed,<br>Corn &amp; Palmolein Oil) and Edible Common Salt Powder.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Brominated vegetable oil<br>Corn syrup<br>Sodium chloride / salt
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 43 - Barcode: 8901719122644
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        REFINED WHEAT FLOUR (MAIDA),<br>SUGAR,<br>REFINED PALM OIL,<br>CHOC0 CHIPS (8%) [SUGAR,<br>EDIBLE VEGETABLE FAT (HYDROGENATED OILS),<br>COCOA SOLIDS,<br>EMULSIFIER OF VEGETABLE ORIGIN (SOYA LECITHIN) AND ARTIFICIAL FLAVOURING SUBSTANCES (VANILLA)],<br>COCOA SOLIDS (2%),<br>INVERT SUGAR SYRUP,<br>RAISING AGENTS [503 (ii),<br>500 (ii)],<br>IODISED SALT AND EMULSIFIER OF VEGETABLE ORIGIN (DIACETYLTARTARIC AND FATTY ACID ESTERS OF GLYCEROL).<br>CONTAINS PERMITTED NATURAL FOOD COLOUR [150d] AND ADDED FLAVOURS (ARTIFICIAL FLAVOURING SUBSTANCES - CHOCOLATE).
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Sulphite ammonia caramel (E150d)<br>Sucrose<br>Artificial flavouring<br>Invert sugar<br>Sodium chloride / salt<br>Vanillin<br>Mono- and diacetyltartaric acid esters of mono- and diglycerides of fatty acids (E472e)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 44 - Barcode: 8901058001846
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Sugar,<br>Milk solids (16.2%),<br>Fractionated vegetable fat,<br>Hydrogenated vegetable fats,<br>Refined Wheat flour (Maida),<br>Cocoa solids (4.5%),<br>Emulsifier (Soya lecithin),<br>Yeast,<br>Raising agent (500(ii)),<br>Artificial (Vanilla) flavouring substance,<br>Iodised salt,<br>Flour treatment agent (516) and Nature-Identical flavouring substance.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Calcium sulphate (E516)<br>Sodium carbonate (E500)<br>Sucrose<br>Torula yeast<br>Artificial flavouring<br>Sodium chloride / salt<br>Vanillin
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 45 - Barcode: 61YD04qFPHL._SL1500_
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No ingredients available</em>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 46 - Barcode: 8904335600886
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        100% Steel Cut Oats
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 47 - Barcode: 8906048500651
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No ingredients available</em>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 48 - Barcode: 8901088045674
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Mineral Oil (79% v/v),<br>Coconut Oil (20% v/v),<br>Vitamin E Acetate,<br>Fragrance with Jasmine extract,<br>Benzophenone-3,<br>TBHQ.
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        <em>No corrected ingredients available</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 49 - Barcode: 8901207014642
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        Water,<br>Tomato Paste (37%),<br>Acidity Regulator (INS 330) and Antioxidant (INS 300).<br>TSS - 9.5%
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Citric acid: lemon salt (E330)<br>Ascorbic Acid: Vitamin C (E300)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                Entry 50 - Barcode: 8901725136215
+            </div>
+            <div class="comparison">
+                <div class="column">
+                    <div class="column-header">Original Ingredients</div>
+                    <div class="ingredients-content">
+                        CHOCO CRÈME (38%) {SUGAR,<br>REFINED PALMOLEIN,<br>REFINED PALM OIL,<br>COCOA SOLIDS (5.3%),<br>EMULSIFIER [LECITHIN (FROM SOYABEAN)],<br>NATURE IDENTICAL FLAVOURING SUBSTANCES - CHOCOLATE AND ARTIFICIAL FLAVOURING SUBSTANCES - VANILLA},<br>REFINED WHEAT FLOUR (MAIDA),<br>HYDROGENATED VEGETABLE OILS,<br>SUGAR,<br>INVERT SYRUP,<br>LIQUID GLUCOSE,<br>RAISING AGENTS [INS 503(II),<br>INS 500(II),<br>INS 450(I)],<br>COCOA SOLIDS (0.7%),<br>BUTTER,<br>MILK SOLIDS,<br>IODIZED SALT AND EMULSIFIERS [LECITHIN (FROM SOYABEAN),<br>MONO- AND DI-GLYCERIDES OF FATTY ACIDS (FROM PALM OIL)].<br>CONTAINS PERMITTED NATURAL COLOUR(S) (INS 150d,<br>INS 150c) AND ADDED FLAVOUR(S) (NATURE IDENTICAL FLAVOURING SUBSTANCES - CHOCOLATE AND ARTIFICIAL FLAVOURING SUBSTANCES - VANILLA,<br>MILK)
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-header">Corrected Ingredients</div>
+                    <div class="ingredients-content">
+                        Ammonium carbonate (E503)<br>Sodium carbonate (E500)<br>Diphosphates (E450)<br>Sulphite ammonia caramel (E150d)<br>Ammonia caramel (E150c)<br>Sucrose<br>Vanillin<br>Invert sugar<br>Sodium chloride / salt<br>Mixed acetic and tartaric acid esters of mono- and diglycerides of fatty acids (E472f)<br>Artificial flavouring<br>Lecithins (E322)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Generated by Ingredients Comparison Tool</p>
+        </div>
+    </div>
+</body>
+</html>
